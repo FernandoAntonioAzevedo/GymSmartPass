@@ -143,6 +143,17 @@ button {
   padding-top: 8rem;
 }
 
+.section-title {
+  font-size: var(--h1-font-size);
+  margin-bottom: 2rem;
+}
+
+.section-title::before {
+  content: attr(data-title);
+  display: block;
+  color: var(--first-color);
+}
+
 .description {
   max-width: 460px;
   margin-bottom: 3rem;
@@ -161,6 +172,19 @@ button {
 
 .home-container {
   grid-template-columns: 7fr 5fr;
+}
+
+/* Variável para --column uso em demais partes do código, evitando a necessidade de repetição
+de propriedades... */
+.logos-container,
+.choose-container,
+.choose-data {
+  grid-template-columns: repeat(var(--column), 1fr);
+}
+
+.choose-container {
+  align-items: center;
+  column-gap: 8rem;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -241,8 +265,46 @@ button {
 }
 
 /*=============== LOGOS ===============*/
+.logos {
+  padding-block: 3.5rem;
+}
+
+.logos-container {
+  --column: 4;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.logo-img {
+  width: 190px;
+}
 
 /*=============== CHOOSE US ===============*/
+.choose-container,
+.choose-data {
+  --column: 2;
+}
+
+.choose-timing {
+  background-color: var(--first-color);
+  padding: 1.5rem;
+}
+
+.choose-timing-title,
+.choose-time {
+  color: var(--title-color-black);
+  text-align: center;
+}
+
+.choose-timing-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.choose-group img {
+  width: 80%;
+  margin-left: 3rem;
+}
 
 /*=============== PROGRAM ===============*/
 
