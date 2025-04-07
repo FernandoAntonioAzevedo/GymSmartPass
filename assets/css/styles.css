@@ -97,10 +97,48 @@ button {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+.main-logo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-size: var(--h3-font-size);
+}
+
+.main-logo-img {
+  width: 20px;
+}
 
 /*=============== LAYOUT ===============*/
+.container {
+  
+  max-width: 1124px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
 
 /*=============== HEADER & NAV ===============*/
+.header {
+  background-color: var(--container-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav,
+.nav-list { 
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  justify-content: space-between;
+  height: 5.5rem;
+}
+
 
 /* Active link */
 
