@@ -110,6 +110,24 @@ button {
   width: 20px;
 }
 
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: 1.25rem 2rem;
+  color: var(--title-color-black);
+  font-weight: var(--font-semibold);
+  transition: background 0.3s;
+  border-radius: 3rem;
+}
+
+.button:hover {
+  background-color: var(--first-color-dark);  
+}
+
+.section {
+  padding-top: 8rem;
+}
+
 /*=============== LAYOUT ===============*/
 .container {
   
@@ -118,9 +136,17 @@ button {
   padding-inline: 1.25rem;
 }
 
+.grid {
+  display: grid;
+}
+
+.home-container {
+  grid-template-columns: 7fr 5fr;
+}
+
 /*=============== HEADER & NAV ===============*/
 .header {
-  background-color: var(--container-color);
+  background-color: transparent;
   position: fixed;
   top: 0;
   left: 0;
@@ -139,6 +165,32 @@ button {
   height: 5.5rem;
 }
 
+.nav-link,
+.nav-close,
+.nav-toggle {
+  color: var(--title-color);
+}
+
+.nav-list {
+  column-gap: 4rem;
+}
+
+.nav-link {
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--first-color);
+}
+
+.nav-button {
+  background-color: var(--title-color);
+}
+
+.nav-toggle,
+.nav-close {
+  display: none;
+}
 
 /* Active link */
 
