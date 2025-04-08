@@ -127,6 +127,7 @@ button {
 .button-flex {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   column-gap: 0.5rem;
 }
 
@@ -153,8 +154,13 @@ button {
   display: block;
   color: var(--first-color);
   font-size: var(--h3-font-size);
-  transform: rotate(-2deg);
+  /*transform: rotate(-2deg);*/
   margin-bottom: 0.75rem;
+}
+
+.title-center {
+  margin-top: 6rem;
+  text-align: center;
 }
 
 .description {
@@ -188,6 +194,22 @@ de propriedades... */
 .choose-container {
   align-items: center;
   column-gap: 8rem;
+}
+
+.program-container,
+.pricing-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.program-card,
+.pricing-card {
+  flex: 1 1 0 ;
+  max-width: calc(33.33% - 1rem);
+  min-width: var(--min-width);
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -305,8 +327,9 @@ de propriedades... */
 }
 
 .choose-group img {
-  width: 80%;
+  width: 75%;  
   margin-left: 3rem;
+  transform: rotate(-6deg);
 }
 
 .choose-data {
@@ -324,11 +347,91 @@ de propriedades... */
 
 /*=============== PROGRAM ===============*/
 
+.program-card {
+  --min-width: 305px;
+  background-color: var(--container-color);
+  padding: 2rem;
+  transition: background 0.4s;
+}
+
+.program-no {
+  font-family: var(--second-font);
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+}
+
+.program-title {
+  font-size: var(--h3-font-size);
+  margin-block: 1rem;
+}
+
+.program-no,
+.program-title,
+.program-description {
+  transition: color 0.4s;
+}
+
 /* Card hover */
+.program-card:hover {
+  background-color: var(--first-color);
+}
+
+.program-card:hover :is(.program-no, .program-title, .program-description) {
+  color: var(--title-color-black);
+}
+
 
 /*=============== PRICING ===============*/
+.pricing-card {
+  --min-width: 325px;
+  background-color: var(--container-color);
+  padding: 2rem 3rem;
+}
+
+.pricing-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.pricing-no {
+  font-size: var(--h2-font-size);
+  text-align: center;
+}
+
+.pricing-list {
+  margin-block: 2.5rem;
+}
+
+.pricing-item {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-bottom: 1rem;  
+}
+
+.pricing-item i {
+  color: var(--first-color);
+  font-size: 1.25rem;
+}
+
+.pricing-button {
+  display: flex;  
+}
+
+.pricing-button,
+.pricing-button:hover {
+  background-color: var(--title-color);  
+}
 
 /* Active card */
+.pricing-card-active {
+  background-color: var(--first-color);
+}
+
+.pricing-card-active :is(.pricing-title, .pricing-no, .pricing-item, .pricing-item i) {
+  color: var(--title-color-black);
+}
 
 /*=============== CALCULATE ===============*/
 
