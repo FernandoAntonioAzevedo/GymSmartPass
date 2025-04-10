@@ -298,7 +298,50 @@
 
       <!--=============== CALCULATE ===============-->
       <section class="calculate section">
-        <div class="calculate-container container grid"></div>
+        <div class="calculate-container container grid">
+          <div class="calculate-content">
+            <h1 class="section-title title-center" data-title="Calculadora Corporal">
+              Calcule seu IMC<br>
+            </h1>
+            
+            <p class="description">
+              A calculadora do índice de massa corporal (IMC) calcula o índice de massa corporal
+              a partir de seu peso e altura. 
+            </p>
+
+            <form action="" class="calculate-form grid" id="calculate-form">
+              <div class="calculate-box">
+                <input 
+                  type="number" 
+                  placeholder="Altura" 
+                  class="calculate-input"
+                  id="calculate-cm"     
+                />
+                <label for="" class="calculate-label">cm</label>
+              </div>
+
+              <div class="calculate-box">
+                <input 
+                  type="number" 
+                  placeholder="Peso" 
+                  class="calculate-input"
+                  id="calculate-kg"
+                />
+                <label for="" class="calculate-label">Kg</label>
+              </div>
+
+              <button class="button button-flex" type="submit">
+                Calcular  <i class="ri-arrow-right-line"></i>
+              </button>
+            </form>
+
+            <p class="calculate-message" id="calculate-message">Insira sua altura e peso para calcularmos seu IMC.</p>
+          </div>
+
+          <div class="calculate-images">
+            <img src="assets/img/home-woman.png" alt="" class="calculate-img">
+          </div>
+        </div>
       </section>
 
       <!--=============== MARQUEE ===============-->

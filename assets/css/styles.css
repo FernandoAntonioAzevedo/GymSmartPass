@@ -117,6 +117,7 @@ button {
   color: var(--title-color-black);
   font-weight: var(--font-semibold);
   transition: background 0.3s;
+  cursor: pointer;
   border-radius: 3rem;
 }
 
@@ -166,6 +167,16 @@ button {
 .description {
   max-width: 460px;
   margin-bottom: 3rem;
+  margin-left: 3.3rem;
+  text-align: center;
+}
+
+.color-red {
+  color: hsl(0, 80%, 64%);
+}
+
+.color-first {
+  color: var(--first-color);
 }
 
 /*=============== LAYOUT ===============*/
@@ -179,7 +190,8 @@ button {
   display: grid;
 }
 
-.home-container {
+.home-container,
+.calculate-container {
   grid-template-columns: 7fr 5fr;
 }
 
@@ -187,11 +199,13 @@ button {
 de propriedades... */
 .logos-container,
 .choose-container,
-.choose-data {
+.choose-data,
+.calculate-form {
   grid-template-columns: repeat(var(--column), 1fr);
 }
 
-.choose-container {
+.choose-container,
+.calculate-container {
   align-items: center;
   column-gap: 8rem;
 }
@@ -434,6 +448,78 @@ de propriedades... */
 }
 
 /*=============== CALCULATE ===============*/
+
+
+.calculate-form {
+  --column: 2;
+  gap: 1rem;
+}
+
+.calculate-box {
+  position: relative;
+  border: 2px solid var(--text-color);  
+}
+
+.calculate-input {
+  width: 100%;
+  padding: 1.25rem 3.5rem 1.25rem 1.5rem;
+}
+
+.calculate-label {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.25rem;
+  color: var(--title-color);
+}
+
+.calculate-img {
+  width: 100vh;
+}
+
+.calculate-form .button {
+  grid-column: 1/3;
+}
+
+.calculate-input::-webkit-outer-spin-button,
+.calculate-input::-webkit-inner-spin-button {
+  --webkit-appearence: none;
+}
+
+.calculate-input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.calculate-message {
+  position: absolute;
+  transform: translate(1rem);
+  margin-top: 1rem;
+}
+
+.calculate-images {
+  margin-top: 8rem; 
+  border-radius: 0 0 100vw 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.calculate-images::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 0 0;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: var(--first-color);
+  
+}
+
+.calculate-img {
+  width: clamp(0.8125rem, -18.3043rem + 53.1022vw, 19rem);
+  z-index: 10;
+  position: relative;
+  margin-left: 5rem; 
+}
 
 /*=============== MARQUEE ===============*/
 
