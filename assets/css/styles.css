@@ -448,8 +448,6 @@ de propriedades... */
 }
 
 /*=============== CALCULATE ===============*/
-
-
 .calculate-form {
   --column: 2;
   gap: 1rem;
@@ -472,9 +470,6 @@ de propriedades... */
   color: var(--title-color);
 }
 
-.calculate-img {
-  width: 100vh;
-}
 
 .calculate-form .button {
   grid-column: 1/3;
@@ -522,8 +517,43 @@ de propriedades... */
 }
 
 /*=============== MARQUEE ===============*/
+.marquee-bg {
+  background-color: var(--first-color);
+  padding-block: 1.45rem;
+  
+  overflow: hidden;
+}
+
+.marquee-bg,
+.marquee-list,
+.marquee-item {
+  display: flex;
+  --gap: 1.75rem;
+  column-gap: var(--gap);
+}
+
+.marquee-list {
+  flex-shrink: 0;
+  animation: marquee 18s linear infinite;
+}
+
+.marquee-item {
+  align-items: center;
+  color: var(--title-color-black);
+  font-family: var(--second-font);
+  font-size: var(--h2-font-size);
+}
+
+.marquee-item i {
+  font-size: 1.25rem;
+}
 
 /* Animation */
+@keyframes marquee {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
 
 /*=============== FOOTER ===============*/
 
