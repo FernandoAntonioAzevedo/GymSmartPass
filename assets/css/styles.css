@@ -287,6 +287,9 @@ de propriedades... */
 }
 
 /*=============== MAIN ===============*/
+.main {
+  overflow: hidden;
+}
 
 /*=============== HOME ===============*/
 .home-container {
@@ -663,6 +666,20 @@ de propriedades... */
 }
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: hsl(79, 4%, 15%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(79, 4%, 25%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(79, 4%, 35%);
+}
+
+
 
 /*=============== SCROLL UP ===============*/
 .scrollup {

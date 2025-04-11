@@ -54,6 +54,20 @@ const scrollUp = () => {
 window.addEventListener('scroll', scrollUp);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+});
+
+sr.reveal(`.home-data, .footer-container, .footer-group`)
+sr.reveal(`.home-img`, { delay: 700, origin: 'bottom'});
+sr.reveal(`.logo-img, .program-card, .pricing-card`, { interval: 100});
+sr.reveal(`.choose-group, .calculate-content`, { origin: 'left'});
+sr.reveal(`.choose-content, .calculate-images`, { origin: 'right'});
+
+
 
 /*=============== CALCULATE BMI ===============*/
 const calculateForm = document.getElementById('calculate-form'),
