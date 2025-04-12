@@ -30,7 +30,7 @@
 }
 
 /* Responsive typography */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 910px) {
   :root {
     --big-font-size: 2rem;
     --h1-font-size: 1.75rem;
@@ -166,9 +166,8 @@ button {
 
 .description {
   max-width: 460px;
-  margin-bottom: 3rem;
-  margin-left: 3.3rem;
-  text-align: center;
+  margin-bottom: 3rem;  
+  text-align: left;
 }
 
 .color-red {
@@ -707,14 +706,124 @@ de propriedades... */
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1070px) {
+  .choose-container,
+  .calculate-container {
+    column-gap: 4rem;
+  }
+
+  .footer-content {
+    column-gap: 3.5rem;
+  }
+
+  .scrollup {
+    right: 1rem;
+  }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 910px) {
+  .nav {
+    height: 3.5rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    border-left: 2px solid var(--text-color);
+    background-color: hsla(180, 12%, 8%, 0.8);
+    backdrop-filter: blur(32px);
+    width: 50%;
+    height: 100%;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2.5rem;
+    padding: 5rem 0 0 3rem;
+  }
+
+  .nav-close,
+  .nav-toggle {
+    display: inline-flex;
+    cursor: pointer;
+  }
+
+  .nav-close {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+
+  .nav-toggle {
+    font-size: 1.4rem;
+  }
+
+  .section {
+    padding-top: 6rem;
+  }
+
+  .home-img {
+    width: 320px;
+    margin-inline: auto;
+  }
+
+  .logo-img {
+    width: 120px;
+  }
+
+  .choose-container,
+  .calculate-container {
+    column-gap: 2.5rem;
+  }
+
+  .choose-timing {
+    padding: 1rem;
+  }
+
+  .program-container,
+  .pricing-container {
+    padding-top: 1rem;
+  }
+  
+  .calculate-container {
+    grid-template-columns: 6.5fr 5.5fr;
+  }
+
+  .marquee-bg {
+    padding-block: 1.25rem;
+  }
+
+  .footer {
+    padding-bottom: 2rem;
+  }
+
+  .footer-form {
+    flex-direction: column;
+  }
+
+  .show-scroll {
+    bottom: 2rem;
+  }
 }
 
 /* For medium devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 740px) {
+  .home-container {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .home-data {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .description {
+    margin-inline: auto;
+  }
 }
 
 /* For small devices */
