@@ -759,6 +759,12 @@ de propriedades... */
     backdrop-filter: blur(32px);
     width: 50%;
     height: 100%;
+    transition: right 0.3s;
+  }
+
+  /* Show Menu */
+  .show-menu {
+    right: 0;
   }
 
   .nav-list {
@@ -859,6 +865,10 @@ de propriedades... */
 
 /* For medium devices */
 @media screen and (max-width: 740px) {
+  .nav-menu {
+    width: 80%;
+  }
+
   .home-container,
   .choose-container,
   .calculate-container,
@@ -948,15 +958,49 @@ de propriedades... */
     row-gap: 2.5rem;
   }
 
+  .footer-content  {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
   .footer-group {
     flex-direction: column;
     row-gap: 2rem;
     margin-top: 5rem;
-  }
+  }  
 
   
 }
 
 /* For small devices */
 @media screen and (max-width: 360px) {
+
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .program-card,
+  .pricing-card {
+    --min-width: 100%;
+  }
+
+  .program-card {
+    padding-inline: 1.5rem;
+  }
+
+  .pricing-card {
+    padding-inline: 2rem;
+  }
+
+  .footer-content  {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .scrollup {
+    font-size: 0.8rem;
+    
+  }
 }

@@ -1,8 +1,17 @@
 /*=============== MENU ===============*/
+const navMenu = document.getElementById('nav-menu'),
+navToggle = document.getElementById('nav-toggle'),
+navClose = document.getElementById('nav-close');
 
 /* Menu show */
+navToggle.addEventListener('click', () => {
+    navMenu.classList.add('show-menu');
+});
 
 /* Menu hidden */
+navClose.addEventListener('click', () => {
+    navMenu.classList.remove('show-menu');
+});
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () => {
@@ -16,6 +25,15 @@ const scrollHeader = () => {
 window.addEventListener('scroll', scrollHeader);
 
 /*=============== REMOVE MENU MOBILE ===============*/
+const navLink = document.querySelectorAll('.nav-link');
+
+const linkAction = () => {
+    const navMenu = document.getElementById('nav-menu');
+
+    navMenu.classList.remove('show-menu');
+};
+
+navLink.forEach((n) => n.addEventListener('click', linkAction));
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]');
